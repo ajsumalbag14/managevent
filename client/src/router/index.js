@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Register from '@/components/registration_form'
-import Dashboard from '@/components/admin/dashboard'
+import Register from '@/components/registration/Registration'
+import Dashboard from '@/components/admin/Dashboard'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/registration',
       name: 'registration',
       component: Register
     },

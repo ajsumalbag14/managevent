@@ -10,6 +10,8 @@ Vue.config.productionTip = false
 Vue.use(VueResource)
 Vue.use(VeeValidate)
 
+Vue.http.options.root = 'http://localhost:8000/'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
