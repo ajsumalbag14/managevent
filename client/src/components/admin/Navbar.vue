@@ -1,19 +1,57 @@
 <template>
 
-  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0 --offset-2" href="/admin">Managevent</a>
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Sign out</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="/">Managevent&trade;</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+
+      <sidebar></sidebar>
+
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
         </li>
       </ul>
-    </nav>  
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          <a href="/users" class="nav-link">
+            <i class="fa fa-fw fa-user"></i>Juan Dela Cruz</a>
+        </li>
+      <!-- TODO: Implement Algolia 
+        <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0 mr-lg-2">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for...">
+              <span class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </li>
+      -->
+        <li class="nav-item">
+          <a href="/login" class="nav-link">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 </template>
 
 <script>
+import Sidebar from '@/components/admin/Sidebar'
 export default {
-  
+  components: {
+      'sidebar': Sidebar
+  }
 }
 </script>
 

@@ -1,7 +1,18 @@
 <template>
-<div class="container">
-    <div class="card card-register mx-auto mt-5">
-        <div class="card-header text-center"><h3>Registration Form</h3></div>
+<div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Registration</li>
+      </ol>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-address-card"></i> Register Delegate
+        </div>
+
         <div class="card-body">
             <form enctype="multipart/form-data" @submit.prevent="create">
             <div class="form-group">
@@ -102,7 +113,6 @@
             <div class="text-left">
                 <hr>
                 <input class="btn btn-success" type="submit" value="Register">
-                <a class="d-block small mt-3" href="#">Back to main page</a>
             </div>
 
             </form>
@@ -148,7 +158,4 @@
 </script>
 
 <style>
-     body {
-        background-color: #555;
-    }
 </style>
